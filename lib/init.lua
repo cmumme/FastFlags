@@ -203,6 +203,7 @@ function FastFlags:ProcessPluginOverride(PluginOverrideObject: Configuration)
 
     local Flag = self.Flags[PluginOverrideObject.Name]
     if(not Flag) then warn(`Could not find a flag for the {PluginOverrideObject.Name} plugin override. We will not attempt to use it.`) return end
+    if(not table.find(Flag.Definition.OverrideEnvironments, self.Environment)) then warn(`The current environment ({self.Environment}) is not compatible with override {PluginOverrideObject.Name}. We will not attempt to use it.`) return end
 
     PluginOverrideObject:GetAttributeChangedSignal("FastFlag_Value"):Connect(function()
         self:UpdateFlag(Flag, PluginOverrideObject:GetAttribute("FastFlag_Value"), FlagSource.PluginOverride)
