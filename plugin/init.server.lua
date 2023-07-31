@@ -10,13 +10,19 @@
 local Toolbar = plugin:CreateToolbar("FastFlags")
 local OpenMenuButton = Toolbar:CreateButton("OpenMenu", "Open fast flags menu", "rbxassetid://3944688398", "Open Menu")
 
--- Dependencies
-local Menu = require(script.Menu)
+if(pcall(function()
+    loadstring("")()
+end)) then
+    OpenMenuButton.Enabled = true
+    local Menu = require(script.Menu)
 
-OpenMenuButton.Click:Connect(function()
-    Menu:ToggleMenu()
-end)
+    OpenMenuButton.Click:Connect(function()
+        Menu:ToggleMenu()
+    end)
 
-Menu.Toggled:Connect(function()
-    OpenMenuButton:SetActive(Menu.IsOpen)
-end)
+    Menu.Toggled:Connect(function()
+        OpenMenuButton:SetActive(Menu.IsOpen)
+    end)
+else
+    OpenMenuButton.Enabled = false
+end
