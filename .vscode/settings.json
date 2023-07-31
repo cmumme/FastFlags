@@ -1,0 +1,16 @@
+{
+    "robloxLsp.diagnostics.disable": [
+        "undefined-doc-name"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/Dependencies": true,
+        "**/Packages": true,
+        "**/DevPackages": true
+    }
+}

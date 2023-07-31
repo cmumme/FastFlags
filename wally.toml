@@ -1,0 +1,15 @@
+[package]
+name = "cmumme/fastflags"
+description = "Toggleable fast flags through studio, for testing or production."
+version = "1.0.0"
+license = "MIT"
+authors = ["typechecked <me@typechecked.dev>"]
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+exclude = ["**"]
+include = ["lib", "lib/*", "default.project.json", "wally.lock", "wally.toml"]
+
+[dependencies]
+Signal = "sleitnick/signal@1.5.0"
+Fusion = "elttob/fusion@0.2.0"
+PluginEssentials = "aloroid/pluginessentials@0.1.2"

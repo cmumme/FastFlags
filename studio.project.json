@@ -1,0 +1,22 @@
+{
+    "name": "fastflags-studio",
+    "tree": {
+        "$className": "DataModel",
+
+        "ReplicatedStorage": {
+            "$path": "test/ReplicatedStorage",
+            "Packages": {
+                "$path": "Packages/",
+                "FastFlags": {
+                    "$path": "lib/"
+                }
+            }
+        },
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "FastFlagsPlugin": {
+                "$path": "plugin/"
+            }
+        }
+    }
+}
